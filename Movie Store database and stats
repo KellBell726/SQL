@@ -1,0 +1,36 @@
+First I created a table with movie titles, genre, release year, price, and quantity
+
+CREATE TABLE movies (id INTEGER PRIMARY KEY, title TEXT, genre TEXT, release_year INTEGER, price INTEGER, quantity INTEGER);
+
+INSERT INTO movies VALUES (1, "Snow White and the Seven Dwarfs", "Animated", 1937, 10, 12);
+INSERT INTO movies VALUES (2, "The Game Plan", "Family", 2009, 6, 3);
+INSERT INTO movies VALUES (3, "Atlantis", "Animated", 2001, 6, 4);
+INSERT INTO movies VALUES (4, "The Little Mermaid", "Animated", 1989, 15, 7);
+INSERT INTO movies VALUES (5, "Mary Poppins", "Family", 1964, 15, 19);
+INSERT INTO movies VALUES (6, "Onward", "Animated", 2020, 16, 5);
+INSERT INTO movies VALUES (7, "National Treasure", "Adventure", 2004, 8, 5);
+INSERT INTO movies VALUES (8, "Pirates of the Caribbean", "Adventure", 2003, 10, 4);
+INSERT INTO movies VALUES (9, "Star Wars", "Science Fiction", 1977, 15, 3);
+INSERT INTO movies VALUES (10, "Iron Man", "Action", 2008, 16, 5);
+INSERT INTO movies VALUES (11, "Hocus Pocus", "Fantasy", 1993, 7, 5);
+INSERT INTO movies VALUES (12, "Father of the Bride", "Comedy", 1991, 6, 8);
+INSERT INTO movies VALUES (13, "George of the Jungle", "Comedy", 1997, 6, 4);
+INSERT INTO movies VALUES (14, "Edward Scissorhands", "Drama", 1990, 11, 3);
+INSERT INTO movies VALUES (15, "Secretariat", "Drama", 2010, 13, 8);
+
+I selected all from movies and ordered them from most expensive to least expensive
+
+SELECT * FROM movies;
+SELECT * FROM movies ORDER BY price desc;
+
+I selected movie titles, genres, and release year and ordered them by release year 
+
+SELECT title, genre, release_year FROM movies ORDER BY release_year asc;
+
+I selected movie titles and release years from 2001-present and ordered them chronologically
+
+SELECT title, release_year FROM movies WHERE release_year >=2001 ORDER BY release_year asc;
+
+I selected movie titles, price, and quantities where the price is more than 10
+SELECT title, price, quantity FROM movies WHERE price <10 ORDER BY price asc;
+
