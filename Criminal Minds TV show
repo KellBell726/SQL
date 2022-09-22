@@ -1,0 +1,77 @@
+/* Create table about the people and what they do here */
+
+
+/* I created a table based on the tv show Criminal Minds using actor, character, total number of episodes, year of first appearance, year of last appearance*/
+
+
+CREATE TABLE criminal_minds (id INTEGER PRIMARY KEY,
+    actor_name TEXT,
+    character_name TEXT,
+    episodes INTEGER,
+    start INTEGER,
+    finish INTEGER);
+    
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("Matthew Gray Gubler", "Dr. Spencer Reid", 323, 2005, 2020);
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("Kirsten Vangsness", "Penelope Garcia", 321, 2005, 2020);
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("A.J. Cook", "Jennifer Jareau", 302, 2005, 2020);
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("Joe Mantegna", "David Rossi", 273, 2007, 2020);
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("Thomas Gibson", "Aaron Hotchner", 257, 2005, 2020);
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("Shemar Moore", "Derek Morgan", 254, 2005, 2020);
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("Paget Brewster", "Emily Prentiss", 194, 2006, 2020);
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("Aisha Tyler", "Dr. Tara Lewis", 87, 2015, 2020);
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("Adam Rodriguez", "Luke Alvez", 69, 2016, 2020);
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("Daniel Henney", "Matt Simmons", 49, 2015, 2020);
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("Jeanne Tripplehorn", "Alex Blake", 48, 2012, 2014);
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("Mandy Patinkin", "Jason Gideon", 51, 2005, 2020);
+INSERT INTO criminal_minds (actor_name, character_name, episodes, start, finish) VALUES ("Lola Glaudini", "Elle Greenaway", 29, 2005, 2020);
+
+/* I created another table detailing how many episodes each actor was in every season. Seasons 1-15*/
+
+CREATE TABLE season_count (id INTEGER PRIMARY KEY, actor_id INTEGER, S1 INTEGER, S2 INTEGER, S3 INTEGER, S4 INTEGER, S5 INTEGER, S6 INTEGER, S7 INTEGER, S8 INTEGER, S9 INTEGER, S10 INTEGER, S11 INTEGER, S12 INTEGER, S13 INTEGER, S14 INTEGER, S15 INTEGER);
+
+
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (1, 22, 23, 20, 25, 23, 24, 24, 24, 24, 23, 22, 22, 22, 15, 10);
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (2, 21, 23, 20, 25, 23, 24, 23, 24, 24, 23, 22, 22, 22, 15, 10);
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (3, 21, 23, 20, 25, 23, 4, 24, 24, 24, 23, 22, 22, 22, 15, 10);
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (4, 0, 0, 16, 25, 23, 24, 24, 24, 24, 23, 22, 22, 22, 15, 10);
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (5, 22, 23, 20, 25, 23, 24, 24, 24, 24, 23, 22, 2, 0, 0, 1);
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (6, 22, 23, 20, 25, 23, 24, 24, 24, 24, 23, 18, 1, 1, 1, 1);
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (7, 0, 15, 20, 25, 23, 18, 24, 0, 1, 0, 1, 20, 22, 15, 10);
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 22, 22, 15, 10);
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 22, 15, 10);
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 22, 15, 10);
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (11, 0, 0, 0, 0, 0, 0, 0, 24, 24, 0, 0, 0, 0, 0, 1); 
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (12, 22, 23, 4, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+INSERT INTO season_count (actor_id, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15) VALUES (13, 22, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+
+/*I joined together both tables to show the actor names, and a count of how many episodes they were present in each season*/
+
+SELECT cm.actor_name, cm.episodes, sc.S1, sc.S2, sc.S3, sc.S4, sc.S5, sc.S6, sc.S7, sc.S8, sc.S9, sc.S10, sc.S11, sc.S12, sc.S13, sc.S14, sc.S15
+FROM criminal_minds cm
+JOIN season_count sc
+ON cm.id = sc.actor_id;
+
+/*I selected only the actors who were part of more than 100 episodes*/
+
+SELECT cm.actor_name, cm.episodes, sc.S1, sc.S2, sc.S3, sc.S4, sc.S5, sc.S6, sc.S7, sc.S8, sc.S9, sc.S10, sc.S11, sc.S12, sc.S13, sc.S14, sc.S15
+FROM criminal_minds cm
+JOIN season_count sc
+ON cm.id = sc.actor_id
+WHERE episodes > 100;
+
+/* I show the table with actors and character names as well as their episode count in descending order*/
+
+SELECT cm.actor_name, cm.character_name, cm.episodes, sc.S1, sc.S2, sc.S3, sc.S4, sc.S5, sc.S6, sc.S7, sc.S8, sc.S9, sc.S10, sc.S11, sc.S12, sc.S13, sc.S14, sc.S15
+FROM criminal_minds cm
+JOIN season_count sc
+ON cm.id = sc.actor_id
+ORDER BY episodes desc;
+
+/* I use the AND clause to show the actors and character names who appeared in at least one episode in every season of the show*/
+
+SELECT cm.actor_name, cm.character_name, cm.episodes, sc.S1, sc.S2, sc.S3, sc.S4, sc.S5, sc.S6, sc.S7, sc.S8, sc.S9, sc.S10, sc.S11, sc.S12, sc.S13, sc.S14, sc.S15
+FROM criminal_minds cm
+JOIN season_count sc
+ON cm.id = sc.actor_id
+WHERE S1 > 1 AND S2 > 1 AND S3 >1 AND S4 >1 AND S5 >1 AND S6 >1 AND S7 >1 AND S8 >1 AND S9 >1 AND S10 >1 AND S11 >1 AND S12 >1 AND S13 >1 AND S14 >1 AND S15 >1
+ORDER BY episodes desc;
