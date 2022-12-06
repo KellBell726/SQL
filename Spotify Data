@@ -1,0 +1,73 @@
+/*For this project, I downloaded spotify data from Kaggle*/
+/*Then I used inserted data into newly created table*/
+/*Finally, I performed analytics on the data using SQL*/
+
+
+
+CREATE TABLE BIT_DB.Spotifydata (
+    id               INTEGER        PRIMARY KEY,
+    artist_name      VARCHAR        NOT NULL,
+    track_name       VARCHAR        NOT NULL,
+    track_id         VARCHAR        NOT NULL,
+    popularity       INTEGER        NOT NULL,
+    danceability     DECIMAL (4, 3) NOT NULL,
+    energy           DECIMAL (4, 3) NOT NULL,
+    song_key         INTEGER        NOT NULL,
+    loudness         DECIMAL (5, 3) NOT NULL,
+    song_mode        INTEGER        NOT NULL,
+    speechiness      DECIMAL (5, 4) NOT NULL,
+    acousticness     DECIMAL (6, 5) NOT NULL,
+    instrumentalness TEXT           NOT NULL,
+    liveness         DECIMAL (5, 4) NOT NULL,
+    valence          DECIMAL (4, 3) NOT NULL,
+    tempo            DECIMAL (6, 3) NOT NULL,
+    duration_ms      INTEGER        NOT NULL,
+    time_signature   INTEGER        NOT NULL
+);
+
+SELECT *
+  FROM BIT_DB.Spotifydata;
+
+SELECT artist_name,
+       track_name,
+       popularity,
+       danceability
+  FROM BIT_DB.Spotifydata
+ WHERE popularity > 85 AND 
+       danceability > 0.8
+ GROUP BY track_name
+ ORDER BY popularity DESC;
+
+SELECT artist_name,
+       track_name,
+       danceability,
+       popularity
+  FROM BIT_DB.spotifydata
+ WHERE popularity >= 90
+ GROUP BY artist_name
+ ORDER BY danceability DESC;
+
+SELECT artist_name,
+       track_name,
+       duration_ms / 1000 AS duration_seconds
+  FROM BIT_DB.Spotifydata
+ ORDER BY duration_seconds DESC;
+
+SELECT artist_name,
+       track_name,
+       tempo,
+       popularity,
+       time_signature
+  FROM BIT_DB.Spotifydata
+ WHERE time_signature < 4;
+
+SELECT artist_name,
+       track_name
+  FROM BIT_DB.Spotifydata;
+
+SELECT artist_name,
+       COUNT(track_name) 
+  FROM BIT_DB.Spotifydata
+ GROUP BY artist_name
+ ORDER BY COUNT(track_name) DESC
+ LIMIT 10;
